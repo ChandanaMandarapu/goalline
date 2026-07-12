@@ -1,0 +1,311 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #f5f5f0;
+  color: #1a1a1a;
+  min-height: 100vh;
+}
+
+.app {
+  max-width: 480px;
+  margin: 0 auto;
+  background: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  border-bottom: 1px solid #e8e8e4;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  color: #1a1a1a;
+}
+
+.logo-accent { color: #2563eb; }
+
+.txline-badge {
+  font-size: 11px;
+  color: #2563eb;
+  background: #eff6ff;
+  padding: 3px 10px;
+  border-radius: 20px;
+  border: 1px solid #bfdbfe;
+}
+
+.stat-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  padding: 14px 18px;
+  background: #f9f9f7;
+  border-bottom: 1px solid #e8e8e4;
+}
+
+.stat-card {
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e8e8e4;
+  padding: 10px 8px;
+  text-align: center;
+}
+
+.stat-num {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a1a1a;
+  font-family: "Courier New", monospace;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 10px;
+  color: #888;
+  margin-top: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 1px solid #e8e8e4;
+  padding: 0 18px;
+}
+
+.tab {
+  padding: 10px 14px;
+  font-size: 13px;
+  color: #888;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  text-transform: capitalize;
+  font-family: inherit;
+  transition: color 0.1s;
+}
+
+.tab:hover { color: #444; }
+
+.tab-active {
+  color: #1a1a1a;
+  border-bottom-color: #2563eb;
+  font-weight: 500;
+}
+
+.main-content {
+  flex: 1;
+  padding: 14px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.section-eyebrow {
+  font-size: 10px;
+  font-weight: 600;
+  color: #aaa;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.match-card {
+  background: #ffffff;
+  border: 1px solid #e8e8e4;
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.live-card { border-color: #fecaca; }
+
+.match-header { margin-bottom: 10px; }
+
+.live-pill {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  background: #fef2f2;
+  color: #dc2626;
+  padding: 2px 8px;
+  border-radius: 10px;
+  letter-spacing: 0.04em;
+}
+
+.match-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.team { flex: 1; display: flex; align-items: center; gap: 6px; }
+.team-right { flex-direction: row-reverse; text-align: right; }
+
+.flag { font-size: 18px; line-height: 1; }
+
+.team-name { font-size: 14px; font-weight: 500; color: #1a1a1a; }
+
+.score-center {
+  text-align: center;
+  min-width: 60px;
+}
+
+.score {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1a1a1a;
+  font-family: "Courier New", monospace;
+  letter-spacing: -0.5px;
+}
+
+.odds-row {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.odds-row-sm { margin-top: 10px; }
+
+.odd-btn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 7px 4px;
+  border-radius: 6px;
+  border: 1px solid #e8e8e4;
+  background: #f9f9f7;
+  cursor: pointer;
+  transition: background 0.1s, border-color 0.1s;
+  font-family: inherit;
+}
+
+.odd-btn:hover {
+  background: #eff6ff;
+  border-color: #bfdbfe;
+}
+
+.odd-btn.picked {
+  background: #eff6ff;
+  border-color: #2563eb;
+}
+
+.odd-label {
+  font-size: 10px;
+  color: #888;
+  margin-bottom: 2px;
+}
+
+.odd-val {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a1a1a;
+  font-family: "Courier New", monospace;
+}
+
+.odd-btn.picked .odd-val { color: #2563eb; }
+
+.verify-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.verify-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #16a34a;
+  flex-shrink: 0;
+}
+
+.verify-text {
+  font-size: 10px;
+  color: #aaa;
+  font-family: "Courier New", monospace;
+}
+
+.fixture-card { }
+
+.fixture-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2px;
+}
+
+.fixture-teams {
+  font-size: 13px;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.fixture-time {
+  font-size: 11px;
+  color: #888;
+  white-space: nowrap;
+}
+
+.picks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background: #f9f9f7;
+  border-radius: 10px;
+  border: 1px solid #e8e8e4;
+  overflow: hidden;
+}
+
+.pick-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  border-bottom: 1px solid #e8e8e4;
+}
+
+.pick-row:last-child { border-bottom: none; }
+
+.pick-match { font-size: 12px; color: #444; }
+
+.pick-choice {
+  font-size: 12px;
+  font-weight: 600;
+  color: #2563eb;
+}
+
+.empty, .empty-picks p {
+  font-size: 13px;
+  color: #888;
+  text-align: center;
+  padding: 32px 0;
+}
+
+.app-footer {
+  padding: 12px 18px;
+  border-top: 1px solid #e8e8e4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9f9f7;
+}
+
+.footer-left {
+  font-size: 10px;
+  color: #aaa;
+}
+
+.footer-right {
+  font-size: 10px;
+  color: #888;
+  font-family: "Courier New", monospace;
+}
